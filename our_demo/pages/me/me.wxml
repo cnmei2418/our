@@ -1,0 +1,58 @@
+<view class="header">
+  
+    <!-- <image class="touxiang" src="/images/头像.png"></image> -->
+  <view wx:if="{{!userInfo}}">
+    <view class="root">
+      <image class="touxiang" src="/images/头像.png" bindtap="login"></image>
+      <text class="nicheng">{{userInfo.nickName}}</text>
+      <!-- <button class="login_btn"  bindtap="login" plain="true">&nbsp;</button> -->
+    </view>
+  </view>
+  <!-- <button class="login_btn" wx:if="{{!userInfo}}" bindtap="login" plain="true">授权登录</button> -->
+  <view wx:if="{{userInfo}}">
+  <view  class="root">
+    <image class="touxiang" src="{{userInfo.avatarUrl}}"></image>
+    <text class="nicheng">{{userInfo.nickName}}</text>
+    <text class="login_out" bindtap="loginOut">退出登录</text>
+  </view>
+</view>
+<view wx:if="{{!userInfo}}">
+<view class="item">
+  <button class="name" bindtap="gotoour">关于我们</button>
+  <image class="img" src="/images/ico关于我们.png"></image>
+  <view class="right_arrow"></view>
+</view>
+<view class="item">
+  <button class="name" open-type="feedback">问题反馈</button>
+  <image class="img" src="/images/问题反馈.png"></image>
+  <view class="right_arrow"></view>
+</view>
+</view>
+
+<view wx:if="{{userInfo}}">
+  <view class="item">
+    <image class="img" src="/images/个人资料.png"></image>
+    <button class="name" bindtap="gotoperson">个人资料</button>
+    <view class="right_arrow"></view>
+  </view>
+
+<view class="item">
+  <button class="name" bindtap="gotoedit">完善信息</button>
+  <image class="img" src="/images/完善信息.png"></image>
+  <view class="right_arrow"></view>
+</view>
+
+
+<view class="item">
+  <button class="name" bindtap="gotoour">关于我们</button>
+  <image class="img" src="/images/ico关于我们.png"></image>
+  <view class="right_arrow"></view>
+</view>
+<view class="item">
+  <button class="name" open-type="feedback">问题反馈</button>
+  <image class="img" src="/images/问题反馈.png"></image>
+  <view class="right_arrow"></view>
+</view>
+</view>
+</view>
+
